@@ -164,6 +164,20 @@ p {
     object-fit: cover;
 }
 
+.imagem-container {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;     /* Centraliza a imagem verticalmente se o contêiner tiver uma altura definida */
+    width: 100%;             /* Ou defina um valor fixo se necessário */
+}
+
+.linguagem-logo {
+    max-width: 100%;
+    height: auto; 
+    width: 300px; 
+    object-fit: cover;
+}
+
 .programadora-imagem {
     max-width: 100%;
     height: auto; 
@@ -218,6 +232,7 @@ p {
         display: none;
         flex-direction: column;
         width: 100%;
+        gap: 10px;
     }
 
     .menu.active {
