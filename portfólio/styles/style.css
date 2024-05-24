@@ -166,9 +166,9 @@ p {
 
 .imagem-container {
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center;     /* Centraliza a imagem verticalmente se o contêiner tiver uma altura definida */
-    width: 100%;             /* Ou defina um valor fixo se necessário */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .linguagem-logo {
@@ -224,21 +224,6 @@ p {
         gap: 20px;
     }
 
-    .hamburger {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
     .apresentacao {
         flex-direction: column-reverse;
         padding: 5%;
@@ -257,5 +242,22 @@ p {
         flex-direction: column; 
         gap: 20px; 
         padding: 10%; 
+    }
+}
+
+@media (max-width: 760px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
