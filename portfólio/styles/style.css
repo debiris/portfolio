@@ -72,6 +72,12 @@ p {
 .apresentacao-conteudo-texto {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.apresentacao-conteudo-projeto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
 }
 
 .rodape {
@@ -185,26 +191,22 @@ p {
     object-fit: cover;
 }
 
-.imagem-projetos img {
-    max-width: 100%;
-    height: auto; 
-    width: 300px; 
-    object-fit: cover; 
-}
-
 .imagem-projetos {
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-    padding: 20px; 
-}
-
+    display: grid; /* Define o elemento como um grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+    gap: 10px; /* Espaçamento entre as imagens */
+    padding: 20px;
+  }
+  
 .imagem-projetos img {
-    max-width: 100%;
-    height: auto; 
-    width: 300px; 
-    object-fit: cover; 
-}
+    max-width: 100%; /* A imagem nunca será maior que a coluna */
+    height: auto; /* Ajusta a altura automaticamente para manter o aspecto da imagem */
+    object-fit: cover; /* A imagem cobre toda a área da coluna */
+  }
+
+.imagem-projetos a {
+    text-decoration: none;
+  }
 
 .descricao-projeto {
     text-decoration: none;
@@ -239,7 +241,8 @@ p {
     }
     
     .imagem-projetos {
-        flex-direction: column; 
+        display: flex; /* Usando Flexbox para o layout vertical */
+        flex-direction: column; /* Organize os elementos verticalmente */
         gap: 20px; 
         padding: 10%; 
     }
